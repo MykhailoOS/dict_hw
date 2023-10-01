@@ -56,3 +56,34 @@ while True:
 
     else:
         print("Error111")
+#
+cash = {
+    "dollar_price": 0.02735,
+    "euro_price": 0.02586,
+    "zloty_price": 0.11962
+}
+qst = input("Це конвертер валют!Вибери дію:\nd - долар, e - євро, z - польскі злоти")
+if qst.lower() == "d":
+    print("Поточний курс",cash.get("dollar_price"))
+    dollar = cash.get("dollar_price")
+    grn_for_dollar = int(input("Напишіть вашу суму в грн> "))
+    grn_to_dollar = grn_for_dollar * dollar
+    print(grn_to_dollar)
+
+elif qst.lower() == "z":
+    print("Поточний курс", cash.get("zloty_price"))
+    zloty = cash.get("zloty_price")
+    grn_for_zloty = int(input("Напишіть вашу суму в грн> "))
+    grn_to_zloty = grn_for_zloty * zloty
+    print(grn_to_zloty)
+
+elif qst.lower() == "e":
+    print("Поточний курс", cash.get("euro_price"))
+    euro = cash.get("euro_price")
+    grn_for_euro = int(input("Напишіть вашу суму в грн> "))
+    grn_to_euro = grn_for_euro * euro
+    print(grn_to_euro)
+
+else:
+    print("Error444")
+
